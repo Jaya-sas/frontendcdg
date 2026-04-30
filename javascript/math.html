@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sara="abcdefghijkLabel"
+        console.log(sara);
+         //length of string
+        console.log(sara.length)
+        console.log(sara.charAt(3)) //returns character at given index
+        console.log(sara.toLocaleLowerCase()) //returns string in lowercase
+        console.log(sara.toUpperCase()) //returns string in uppercase
+        console.log(sara.indexOf("e")) //returns index of first occurrence of substring
+        console.log(sara.lastIndexOf("a")) //returns index of last occurrence of substring //12
+
+
+
+        console.log(Math.random()) //returns random number between 0 and 1
+        console.log(Math.random()*100) //returns random number between 0 and 99
+        console.log(Math.floor(6.7)) //returns largest integer less than or equal to given number
+        console.log(Math.ceil(6.7)) //returns smallest integer greater than or equal to given number
+        console.log(Math.ceil(6.3)) //returns smallest integer greater than or equal to given number
+        console.log(Math.round(6.7)) //returns value of given number rounded to nearest integer
+        console.log(Math.round(6.4)) //returns value of given number rounded to nearest integer
+
+
+        console.log(Math.random()*5) //0 to 4.999..
+
+        console.log(Math.floor(Math.random()*5)+1) //1 to 5
+
+        
+        //OTP 4 digits minimum-1000,  maximum-9999
+        console.log(Math.floor(Math.random()*9000)+1000) //1000 to 9999
+
+
+
+        //Date and time
+        let newDate=new Date()
+        console.log(newDate) //returns current date and time
+
+        console.log(newDate.getFullYear()) //returns current year
+        console.log(newDate.getMonth()) //returns current month (0-11)
+        console.log(newDate.getDate()) //returns current date (1-31)
+
+        let year=newDate.getFullYear()
+        let month=newDate.getMonth()+1
+        let date=newDate.getDate()
+        console.log(`${date}/${month}/${year}`) //returns current date in dd/mm/yyyy format
+
+        let b=[1,2,3,4,5]
+        console.log(b.join("*")) //o/p-1*2*3*4*5
+
+        
+    </script>
+</body>
+</html>

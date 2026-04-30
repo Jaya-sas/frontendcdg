@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            font-family: sans-serif;
+            background-color: whitesmoke;
+            margin: 0px;
+        }
+        .navbar{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: white;
+            padding: 1% 5%;
+            box-shadow: 7px 6px 8px gray;
+            
+        }
+        .menu{
+            display:flex;
+            gap: 20px;
+        }
+       .section1{
+    display: flex;
+    gap: 20px;
+    padding: 40px 5%;
+}
+.section2{
+    display:flex;
+    gap:20px;
+    padding:2px 5%;
+}
+.section3{
+    display: flex;
+    gap: 20px;
+    padding: 20px 5%;
+}
+
+.section3 div{
+    flex: 1;
+}
+
+.section3 img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.left-box{
+    width: 70%;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+
+.items{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.item{
+    text-align: center;
+}
+
+.item img{
+    width: 45px;
+    height: 45px;
+}
+
+
+.right-box{
+    width: 30%;
+    background: #a7d8f5;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.right-box img{
+    width: 100%;
+    max-width: 220px;
+    display: block;
+    margin: auto;
+}
+.section5{
+    display: flex;
+    padding: 50px 5%;
+    align-items: center;
+}
+
+.left5{
+    width: 50%;
+}
+
+.logo{
+    width: 180px;
+}
+
+.left5 h1{
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.left5 h1 span{
+    color: #00baf2;
+}
+
+.left5 p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.download{
+    margin-top: 20px;
+}
+
+.download img{
+    width: 150px;
+    margin-right: 10px;
+}
+
+/* RIGHT */
+.right5{
+    width: 50%;
+}
+
+.right5img{
+    width: 100%;
+    max-width: 500px;
+}
+.credit-paytm-container{
+        display:flex;
+        gap:20px;
+        margin:3%
+      }
+        .credit-card-container{
+            /* border:2px solid black; */
+            padding:5% 5% 4% 3%;
+            border-radius:15px
+        }
+        .credit-card-container .cards-image{
+            width:20%
+        } 
+        .credit-card-container .bank-image{
+            width:40%
+        }
+        .credit-card-container .rupay-cards{
+            width:100%
+        }
+        .apply{
+            display:flex
+        }
+        .apply a{
+            color:#002970;
+            border:1px solid #002970;
+            padding:10px;
+            border-radius:999px;
+            text-decoration: none;
+            margin-right:20px
+          
+        }
+        .apply a:hover{
+            color:white;
+            background-color: #002970;
+        }
+        .satheesh{
+            background-image: url(https://assetscdn1.paytm.com/images/catalog/view_item/1725638720587.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+/* background-position: center; */
+        }
+        
+        .family{
+                background: linear-gradient(#D3F5FF, #FFFFFF);
+
+        }
+        .paytm-money-container {
+        display: flex;
+        /* border: 2px solid black; */
+        margin: 2% 5%;
+        padding:3% 0% 3% 6%;
+        border-top-left-radius: 15px;
+          border-bottom-left-radius: 15px;
+        background-color: white;
+      }
+      .paytm-money{
+        width:80%;
+        margin-top: 3.6%;
+      }
+      .paytm-money img {
+        width: 25%;
+      }
+      .paytm-money .first_para{
+        font-size: 1.2rem;
+      }
+      .mtf-link{
+        background-color: #002970;
+        color:white;
+        display:inline-block;
+        padding:2% 4%;
+        border-radius: 999px;
+      }
+      .mtf-link:hover{
+        background-color: white;
+        color:#002970;
+        border:1px solid #002970
+      }
+      a{
+        text-decoration: none;
+      }
+     .paytm-money .second_para{
+        font-size: 0.6rem;
+        line-height: 1.5;
+        color:grey
+     }
+     .paytm-money-image{
+        margin-top:-3%
+     }
+      .paytm-money-image img{
+        width: 100%;
+      }.credit-paytm-containeer{
+        display: flex;
+        gap: 20px;
+        margin: 3;
+      }
+      .credit-card-containeer {
+       /* border: 2px solid black;*/
+        padding: 5% 4% 3%;
+        border-radius: 15px;
+      }
+      .credit-card-containeer .cards-image {
+        width: 20%;
+      }
+      .credit-card-containeer .bank-image {
+        width: 40%;
+      }
+      .credit-card-containeer .rupay-cards {
+        width: 100%;
+      }
+      .apply {
+        display: flex;
+      }
+      .apply a {
+        color: navy;
+        border: 1px solid navy;
+        padding: 10px;
+        border-radius: 999px;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+      .apply a:hover {
+        color: white;
+        background-color: navy;
+      }
+      .saii{
+        background-image: url(https://assetscdn1.paytm.com/images/catalog/view_item/1725638720587.png);
+        
+
+      }
+      .family{
+            background: linear-gradient(#D3F5FF, #FFFFFF);
+      }
+       
+    </style>
+
+</head>
+<body>
+    <header class="navbar">
+        <div>
+            <img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo_new.svg" alt="">
+        </div>
+        <ul class="menu" type="none">
+            <li>Recharge & Bills<i class="fa-solid fa-angle-down"></i></li>
+            <li>Ticket Booking<i class="fa-solid fa-angle-down"></i></li>
+            <li>Payments & Service<i class="fa-solid fa-angle-down"></i></li>
+            <li>Paytm for Business<i class="fa-solid fa-angle-down"></i></li>
+            <li>Company<i class="fa-solid fa-angle-down"></i></li>
+        </ul>
+
+        <div>
+            <a href=""><i class="fa-solid fa-download"></i>Download App</a>
+            <button><i class="fa-regular fa-user"></i>sign in</button>
+        </div>
+    </header>
+    <section class="section1">
+
+    <div class="left-box">
+        <h2>Recharges & Bill Payments</h2>
+
+        <div class="items">
+            <div class="item">
+                <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179318/36886801089433092.png">
+                <p>Mobile Recharge</p>
+            </div>
+
+            <div class="item">
+                <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179317/36886820392724710.png">
+                <p>DTH Recharge</p>
+            </div>
+
+            <div class="item">
+                <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179320/36886837922197985.png">
+                <p>FasTag Recharge</p>
+            </div>
+
+            <div class="item">
+                <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179321/4291158023212300.png">
+                <p>Electricity Bill</p>
+            </div>
+
+            <div class="item">
+                <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179322/4291177446001440.png">
+                <p>Loan EMI Payment</p>
+            </div>
+
+            <div class="item">
+                <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179319/36886901834673050.png">
+                <p>View All Products</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-box">
+        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179325/4291045606114157.png">
+    </div>
+
+</section>
+<section class="section2">
+     <div class="left2">
+        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179326/36888278327861604.png" alt="" width="690" height="70">
+    </div>
+    <div class="right2">
+        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179327/36887667031536363.png" alt="" width="690" height="70">
+    </div>
+</section>
+<section class="section3">
+    <div>
+        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2988609/4291841603322316.png" alt="" >
+    </div>
+    <div>
+        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3022660/4291820506003774.png" alt=""  >
+    </div>
+    <div>
+        <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3134667/36887499051496070.png" alt="">
+    </div>
+</section>
+
+<section class="section5">
+  <div class="left5">
+    <img src="https://assetscdn1.paytm.com/images/catalog/view/342367/1725447383123.png" class="logo">
+    <h1>
+      Pay anyone directly <br>
+      from your <span>bank account</span>
+    </h1>
+
+    
+    <p>
+      Pay anyone, everywhere. Make contactless & secure payments 
+      in-stores or online using Paytm UPI or directly from your 
+      Bank Account.
+    </p>
+
+    
+    <div class="download">
+      <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2834703/1725432129171.png">
+      <img src="https://assetscdn1.paytm.com/images/catalog/view_item/2834704/1725432148873.png">
+    </div>
+
+  </div>
+
+  <div class="right5">
+    <img src="https://assetscdn1.paytm.com/images/catalog/view/1752741641420.png" class="right5img">
+  </div>
+
+</section>
+
+<div class="credit-paytm-container">
+      <div class="credit-card-container satheesh">
+        <img
+        class="cards-image"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/2988623/27220898816562102.png"
+          alt=""
+        />
+        <h1>One destination for <br> <span style="color:#00BAF2">Credit Cards</span></h1>
+        <p>
+          Paytm HDFC, SBI Card & Axis Bank Credit Card with <br> assured Cashback and
+          incredible offers.
+        </p>
+        <div class="apply">
+        <a href="">Apply Now <i class="fa-solid fa-right-long"></i></a>
+        <img
+        class="bank-image"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/1741675100265.png"
+          alt=""
+        />
+        </div>
+        <img
+        class="rupay-cards"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/2988623/27221716933469500.png"
+          alt=""
+        />
+      </div>
+       <div class="credit-card-container family">
+        <img
+        class="cards-image"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/2834804/1725623952233.png"
+          alt=""
+        />
+        <h1>Insurance ka<br>  <span style="color:#00BAF2">Super Market</span></h1>
+        <p>
+          A Smart, Simple & Transparent Platform to Explore & Purchase Insurance.
+        </p>
+        <div class="apply">
+        <a href="">Get It Now<i class="fa-solid fa-right-long"></i></a>
+      
+        </div>
+        <img
+        class="rupay-cards"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/2988624/27217428616091880.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="paytm-money-container">
+      <div class="paytm-money">
+        <img
+          src="https://assetscdn1.paytm.com/images/catalog/view/308774/1617696247991.png"
+          alt=""
+        />
+        <h1>
+          Switch to Paytm Money.<br />
+          Pay Less, Trade More.<br />
+          <span style="color: #00baf2">
+            Margin Trading Facility<br />
+            (MTF) at 7.99%* p.a.
+          </span>
+        </h1>
+        <p class="first_para">
+          Get up to 4X Buying Power on 1200+ Stocks at Low Interest Rates with
+          Margin Trading Facility by Paytm Money.
+        </p>
+        <a class="mtf-link" href="">Invest With MTF <i class="fa-solid fa-right-long"></i></a>
+        <p class="second_para">
+          Investment in securities market are subject to market risks, read all
+          the related documents carefully before investing. The securities are
+          quoted as an example and not as a recommendation. Margin Funding as
+          subject to the provisions of SEBI Circular CIR/MRD/DP/54/2017 dated
+          June 13, 2017, and the terms and conditions mentioned in rights and
+          obligations statement issued by the Paytm Money Limited. For detailed
+          disclaimer please visit:
+          <a href="https://www.paytmmoney.com/">https://www.paytmmoney.com</a>
+        </p>
+      </div>
+
+      <div class="paytm-money-image">
+        <img
+          src="https://assetscdn1.paytm.com/images/catalog/view/1763534762757.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+
+
+    
+</body>
+</html>

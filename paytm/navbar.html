@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+        font-family: sans-serif;
+        background-color: whitesmoke;
+        margin: 0px;
+      }
+        .navbar{
+            display: flex;
+            align-items: center;    /*aligns in one line*/
+            justify-content: space-between; /* space blw two elements*/
+            background-color: white;
+            padding: 1% 5%  ;
+            box-shadow: 7px 6px 8px gray;
+        }
+        .menu{
+            display: flex;
+            gap: 15px;
+
+        }
+        .download_signin a{
+            color: navy;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .download_signin button{
+           /* padding: 15px; */
+            padding: 6px 15px 6px 1px;
+            border-radius: 999px;
+            color: white;
+            background-color: navy;
+            border: none;
+            margin-left: 15px;
+            font-size: 0.9rem;
+
+        }
+        .download_signin .fa-user{
+            border-radius: 50%;
+            background-color: skyblue;
+            padding: 8px;
+            margin-right: 10px;
+        }
+        .menu li{
+            position: relative;
+        }
+        .dropdown{
+            display: none; /* to hide the dropdown */
+            position: absolute;
+            top: 100%;
+            width:160px ;
+            background-color: white;
+           /* border: 1px solid black; */
+            border-radius: 10px;
+            box-shadow: 5px 6px 7px gray;
+            padding: 20px;
+        }
+        
+        .dropdown li a{
+            text-decoration: none;
+
+        }
+        .dropdown li{
+            padding: 10px 0px;
+        }
+        .menu li:hover .dropdown{
+            display:block
+
+
+        } .paytm-money-containeer{
+            display: flex;
+           /* border: 2px solid black;*/
+            margin: 2% 5%;
+            padding: 3% 0% 2% 6%;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            background-color: white;
+        }
+        .paytm-money {
+            width:80%;
+            margin: 3.5%;
+        }
+        .paytm-money img{
+            width: 25%;
+        }
+        .paytm-money .first_para{
+            font-size: 1.3 rem;
+
+
+        }
+        .mtf-link{
+            background-color: navy;
+            color:white;
+            padding: 2% 4%;
+            border-radius: 999px;
+
+        }
+        .mtf-link:hover{
+            background-color: white;
+            color: navy;
+            border: 1px solid navy;
+        }
+        a{
+            text-decoration: none;
+        }
+        .paytm-money .second_para{
+            font-size: 0.6rem;
+            line-height: 1.5;
+            color: grey;
+
+        }
+        .paytm-money-image{
+            margin-top: 2%;
+        }
+        .paytm-money-image img{
+            width: 100%;
+        }
+
+
+
+
+
+        .footer{
+            margin: 2% 0%;
+            background-color: white;
+
+        }
+        .footer-item{
+            margin: 2%;
+            display: flex;
+            align-items: center;
+        }
+        .footer-item .icon1{
+            font-size: 2 rem;
+            font-weight: 400;
+            margin-right: 20px;
+        }
+        .footer-item .text{
+            font-size: 0.9 rem;
+            font-weight: 600;
+            color: gray;
+        }
+        .footer-item .line{
+            flex:1;
+            border-bottom: 1px solid gray;
+            align-self: flex-end; /* to bring the footer line down*/
+            margin-left: 20px;
+
+        }
+    .section {
+        padding: 20px;
+         }
+
+      .section h1 {
+        margin-bottom: 20px;
+    }
+
+     .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+        gap: 20px;
+
+    }
+
+    .card {
+        background: #f5f7fa;
+        padding: 15px;
+        text-align: center;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        background: #e6f0ff;
+    }
+
+    .icon {
+        font-size: 30px;
+        color: #007bff;
+        margin-bottom: 8px;
+    }
+    .menu1{
+        display: flex;
+        gap: 1%;
+    }
+    .hmm{
+        size: 10px;
+        
+    }
+   .menu2{
+        display: flex;
+        padding: 5px;
+        gap: 2%;
+    }
+
+    .menu2 img{
+        width: 50%;   /* control size */
+        height: auto;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.3s;
+       
+    }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <div> 
+            <img src="https://pwebassets.paytm.com/commonwebassets/paytmweb/header/images/logo_new.svg" alt="">
+        </div>
+        <ul class="menu" type="none">
+            <li>
+                Recharge & Bills<i class="fa-solid fa-angle-down"></i>
+                <ul class="dropdown" type="none">
+                    <li><a href="">MObile Recharge</a></li>
+                    <li><a href=""> Bill Electricity</a></li>
+                    <li><a href=""> DTH Recharge</a></li>
+                    <li><a href=""> Municipal bill</a></li>
+                    <li><a href=""> water bill</a></li>
+                    <li><a href=""> water bill</a></li>
+                    <li><a href="">loan emi</a></li>
+                    <li><a href=""> insurance premimum</a></li>
+                    <li><a href=""> challana</a></li>
+                    
+                </ul>
+            </li>
+            <li>
+                Ticket Booking<i class="fa-solid fa-angle-down"></i>
+                <ul class="dropdown" type="none">
+                    <li><a href="">MObile Recharge</a></li>
+                    <li><a href=""> Bill Electricity</a></li>
+                    <li><a href=""> DTH Recharge</a></li>
+                    <li><a href=""> Municipal bill</a></li>
+                    <li><a href=""> water bill</a></li>
+                    <li><a href=""> water bill</a></li>
+                    <li><a href="">loan emi</a></li>
+                    <li><a href=""> insurance premimum</a></li>
+                    <li><a href=""> challana</a></li>
+                    
+                </ul>
+            </li>
+            <li>Ticket Booking<i class="fa-solid fa-angle-down"></i></li>
+            <li>Payments & Services<i class="fa-solid fa-angle-down"></i></li>
+            <li>Paytm for Business<i class="fa-solid fa-angle-down"></i></li>
+            <li>Company<i class="fa-solid fa-angle-down"></i></li>
+        </ul>
+        <div class="download_signin">
+            <a href=""><i class="fa-solid fa-download"></i>Download App</a>
+            <button><i class="fa-solid fa-user"></i>Sign In</button>
+            
+        </div>
+    </header>
+<div class="menu1">
+<div class="section">
+    <h1>Recharges & Bill Payments</h1>
+
+    <div class="grid">
+        <div class="card">
+            <i class="fa-solid fa-mobile icon"></i>
+            <p>Mobile Recharge</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-tv icon"></i>
+            <p>DTH Recharge</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-bolt icon"></i>
+            <p>Electricity Bill</p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-gas-pump icon"></i>
+            <p>Gas Bill</p>
+        </div>
+    </div>
+</div>
+<div class="hmm">
+    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179325/4291045606114157.png" alt="">
+</div>
+</div>
+
+<div class="menu2">
+    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179326/36888278327861604.png" alt="">
+    <img src="https://assetscdn1.paytm.com/images/catalog/view_item/3179327/36887667031536363.png" alt="">
+</div>
+
+
+
+
+
+
+    <div class="credit-paytm-containeer">
+      <div class="credit-card-containeer saii">
+        <img
+          class="cards-image"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/2988623/27221716933469500.png"
+          alt=""
+        <p>credit Cards</p>
+    
+        <h1>
+          One destination for <br> <span style="color: skyblue"> Credit Cards </span>
+        </h1>
+        <p>
+          Paytm HDFC, SBI Card & Axis Bank Credit Card with <br>assured Cashback and
+          incredible offers.
+        </p>
+        <div class="apply">
+          <a href="">Apply Now <i class="fa-solid fa-right-long"></i></a>
+          <img
+            class="bank-image"
+            src="https://assetscdn1.paytm.com/images/catalog/view_item/1741675100265.png"
+            alt=""
+          />
+        </div>
+        <img
+          class="rupay-cards"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/2988623/27221716933469500.png"
+          alt=""
+        />
+        <!-- <img src="https://assetscdn1.paytm.com/images/catalog/view/1763534762757.jpg" alt=""> -->
+      </div>
+        <div class="credit-card-containeer family">
+        <img
+          class="cards-image"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/2834804/1725623952233.png"
+          alt=""
+        />
+        <h1>
+         Insurance ka<br><span style="color: skyblue">Super Market</span>
+        </h1>
+        <p>
+          A Smart, Simple & Transparent Platform to Explore &<br>Purchase Insurance.
+        </p>
+        <div class="apply">
+          <a href="">Get it Now<i class="fa-solid fa-right-long"></i></a>
+          
+        </div>
+        <img
+          class="rupay-cards"
+          src="https://assetscdn1.paytm.com/images/catalog/view_item/2988624/27217428616091880.png"
+          alt=""
+        />
+        <!-- <img src="https://assetscdn1.paytm.com/images/catalog/view/1763534762757.jpg" alt=""> -->
+      </div>
+    </div>
+
+
+
+
+
+    <div class="paytm-money-containeer">
+    <div class="paytm-money">
+        <img src="https://assetscdn1.paytm.com/images/catalog/view/308774/1617696247991.png" alt="">
+        <h1>Switch to Paytm Money. <br>
+Pay Less, Trade More.<br>
+<span style="color:#00BAF2">Margin Trading Facility<br> (MTF) at 7.99%* p.a.</span></h1>
+<p class="first_para">Get up to 4X Buying Power on 1200+ Stocks at Low Interest Rates with Margin Trading Facility by Paytm Money</p>
+<a class="mtf-link" href="">Invest With MTF <i class="fa-solid fa-right-long"></i> </a><br>
+
+<p class="second_para">Investment in securities market are subject to market risks, read all the related documents carefully before investing. The securities are quoted as an example and not as a recommendation. Margin Funding as subject to the provisions of SEBI Circular CIR/MRD/DP/54/2017 dated June 13, 2017, and the terms and conditions mentioned in rights and obligations statement issued by the Paytm Money Limited. For detailed disclaimer please visit: <a href="https://www.paytmmoney.com/">https://www.paytmmoney.com</a> </p>
+
+    </div>
+    
+    <div class="paytm-money-image">
+        <img src="https://assetscdn1.paytm.com/images/catalog/view/1763534762757.jpg" alt="">
+    </div>
+    </div>
+
+    
+    
+<footer class="footer">
+    <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+            Investor Relations
+        </span>
+        <div class="line">
+
+        </div>
+       
+    </div>
+     <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+            Company
+        </span>
+        <div class="line">
+
+        </div>
+       
+    </div>
+     <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+            more about paytm
+        </span>
+        <div class="line">
+
+        </div>
+       
+    </div>
+     <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+           Career
+        </span>
+        <div class="line">
+
+        </div>
+       
+    </div>
+     <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+            Recharge and pay bills
+        </span>
+        <div class="line">
+
+        </div>
+       
+    </div>
+     <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+           pay loan emi,insurance premimum and education fee
+        </span>
+        <div class="line">
+
+        </div>
+       
+    </div>
+     <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+            book travel and entertainment
+        </span>
+        <div class="line">
+
+        </div>
+        <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+            Investments & Miscellaneous
+        </span>
+        <div class="line">
+
+        </div>
+        <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+           Loans and Credit Card
+        </span>
+        <div class="line">
+
+        </div>
+        <div class="footer-item">
+        <span class="icon1">
+            +
+        </span>
+        <span class="text">
+            Financial Tools & Calculators
+        </span>
+        <div class="line">
+
+        </div>
+       
+    </div>
+</footer>
+</body>
+
+
+
+
+
+
+
+</html>

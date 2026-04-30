@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// array methods
+// push, pop, shift, unshift, splice, slice
+
+        let sara=[4,5,6,7,"saras"]
+        //push
+        // let b=sara.push(99,"venkatesh")
+        // console.log(b)
+        // console.log(sara)
+       
+       
+        //pop deletes last element from array
+        // let g=sara.pop()
+        // console.log(g)
+        // console.log(sara)
+        
+        //shift deletes 1st element in array
+        // sara.shift();
+        // console.log(sara)
+
+        //unshift adds element in 1st position
+            // let j=sara.unshift("Arya","i")
+            // console.log(j)
+            // console.log(sara)
+
+        //splice
+        // 1> which index to start
+        // 2> how many elements to delete
+        // 3> which elements to add
+
+        // sara.splice(1,2,99,"Rajji")
+        // console.log(sara)
+
+
+        //slice -> inclusive, excusive , returns from index 0 to index 3 but not including index 3
+        let d=sara.slice(1,4);
+        console.log(d)
+        console.log(sara)
+
+        
+
+    </script>
+</body>
+</html>

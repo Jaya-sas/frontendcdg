@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student ={
+            name:"sara",
+            age:20,
+            place:"vijayawada"
+        }
+        console.log(student)
+
+        //accessing values in object
+        console.log(student.name)
+        console.log(student.name,student.age,student.place)
+        console.log(student["name"]) //bracket notation 
+        
+
+        //add -> to add new key and value in object
+        student.branch="cse"
+        console.log(student)
+        //delete
+        delete student.age
+        console.log(student)
+
+        console.log(Object.keys(student)) //returns array of keys in object
+        console.log(Object.values(student)) //returns array of values in object 
+        console.log(Object.entries(student)) //returns array of key value pairs in object
+        
+
+        let student2=[
+            {name:"sara",age:20,place:"vijayawada"},
+            {name:"venkatesh",age:21,place:"guntur"},
+            {name:"mani",age:22,place:"hyderabad"}
+        ]
+        console.log(student2[1].name) //accessing name of 2nd student
+
+        let student1={
+            name:"jaya",
+            age:20,
+            hello:function(){
+                let name="sai";
+                console.log(`hellooo ${this.name},how are you?`)  //template literals
+
+            }
+        }
+        student1.hello()
+
+
+
+
+        
+    </script>
+</body>
+</html>

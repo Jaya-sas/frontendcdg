@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://www.amazon.in/" onsubmit="return validation()">
+        <div>
+            <input type="text" placeholder="enter your name" id="name">
+        </div>
+        <div>
+            <input type="text" placeholder="enter your email" id="email">
+        </div>
+        <div>
+            <input type="text" placeholder="enter your password" id="password">
+        </div>
+        <div>
+            <label for="">gender</label>
+
+            <label for="sai">male</label>
+            <input type="radio" name="jaya" id="sai">
+
+            <label for="sri">female</label>
+            <input type="radio" name="jaya" id="sri">
+
+
+        </div>
+        <button>submit</button>
+    </form>
+
+    <script>
+        function validation() {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    let namecheck = /^[a-zA-Z0-9_]{3,16}$/;
+    let emailcheck = /^[a-zA-Z0-9._%+-]+@codegnan\.com$/;
+
+    // 5 letters + 5 numbers + 5 special chars = 15 length
+    let passwordcheck = /^(?=(?:.*[A-Za-z]){5})(?=(?:.*\d){5})(?=(?:.*[^A-Za-z\d]){5}).{15}$/;
+
+    // Name empty check
+    if (name === "") {
+        alert("Please enter your name");
+        return false;
+    }
+
+    if (!name.match(namecheck)) {
+        alert("Enter valid name (3-16 chars, letters/numbers/_ only)");
+        return false;
+    }
+
+    // Email validation
+    if (!email.match(emailcheck)) {
+        alert("Enter valid Codegnan email");
+        return false;
+    }
+    if(male.checked==false && female.checked==false){
+        alert("please select your gender");
+        return false
+    }
+
+    // Password validation
+    if (!password.match(passwordcheck)) {
+        alert("Password must have 5 letters, 5 numbers, 5 special characters and length 15");
+        return false;
+    }
+
+    alert("Form submitted successfully!");
+    return true;
+}
+
+        
+    </script>
+</body>
+</html>

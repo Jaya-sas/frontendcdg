@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick ="sara()">Submit</button>
+
+    <div>
+        <input type="text"  placeholder="Enter your name" id="saras">
+        <button onclick="saraswathi()">login</button>
+    </div>
+    <div id="raja">
+    </div>
+
+    <div id="saras">
+    </div>
+    <script>
+        function sara() {
+            // Function implementation
+            alert ("Button clicked!");
+
+        }
+
+        function saraswathi(){
+            let dora=document.getElementById("saras").value
+            console.log(dora)
+        
+
+
+
+    document.getElementById("raja").innerText=`${dora}  vintunavaaaa`
+    document.getElementById("saras").innerHTML=
+    `<h1 style="color:blue">>hyyy ${dora}</h1>`
+        
+    
+
+
+    }
+
+</script>
+    
+</body>
+</html>

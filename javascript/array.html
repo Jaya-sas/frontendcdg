@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sara=[7,8,"venkatesh","mani",null,true]
+        let v=sara.length
+        console.log(v)
+        console.log(sara)
+        console.log(sara[0],sara[1],sara[2])       
+
+
+
+        for(i=0;i<v;i++){
+            console.log(sara[i])
+        }
+
+        console.log("for each loop")
+        sara.forEach(function(raaaj){
+            console.log(raaaj)
+        })
+
+
+
+        //map
+        console.log("map")
+        let p= sara.map(function(raaaj){
+            //console.log(raaaj)
+            return raaaj
+        })
+        console.log(p)
+        //for of 
+
+        for(let i of sara){
+            console.log(i)
+        }
+        let saraswathi="em chesthunavvvv"
+        for(let i of saraswathi){
+            console.log(i)
+        }
+
+
+        </Script>
+</body>
+</html>
